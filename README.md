@@ -1,1 +1,1058 @@
-# FINLAND-ESTONIA-AY-8D6N-30Aug-6Sep-2026
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Finland - Estonia (AY) 8D6N 30 Aug-6 Sep 2026</title>
+  </head>
+  <body>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: '#00A0C6',
+        'brand-dark': '#007A99',
+        'brand-light': '#E6F7FB',
+        'brand-50': '#F0FAFC',
+        surface: '#FFFFFF',
+        txt: '#1E293B',
+        subtle: '#64748B',
+        accent: '#F59E0B'
+      }
+    }
+  }
+}
+</script>
+  <style>
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { font-family: 'Prompt', sans-serif; }
+.font-display { font-family: 'Playfair Display', serif; }
+
+.nav-btn { transition: all 0.3s ease; }
+.nav-btn:hover, .nav-btn.active { background: #00A0C6; color: white; }
+.nav-btn.active { box-shadow: 0 4px 12px rgba(0,160,198,0.3); }
+
+.card-hover { transition: all 0.3s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,160,198,0.15); }
+
+.day-card { border-left: 4px solid #00A0C6; }
+
+.fade-in { animation: fadeIn 0.5s ease forwards; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+.timeline-dot { width: 14px; height: 14px; border-radius: 50%; background: #00A0C6; border: 3px solid white; box-shadow: 0 0 0 2px #00A0C6; }
+
+.weather-icon { font-size: 2rem; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F0FAFC; }
+::-webkit-scrollbar-thumb { background: #00A0C6; border-radius: 3px; }
+
+.hero-bg {
+  background: linear-gradient(135deg, #00A0C6 0%, #007A99 40%, #005E78 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.08) 0%, transparent 70%);
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, white, transparent);
+}
+
+.tab-section { display: none; }
+.tab-section.active { display: block; }
+
+.day-tab { cursor: pointer; transition: all 0.2s; }
+.day-tab:hover { background: #E6F7FB; }
+.day-tab.active-day { background: #00A0C6; color: white; border-radius: 9999px; }
+
+.tour-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
+}
+.nav-btn {
+  white-space: normal;
+  text-align: center;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  padding: 0.55rem 0.3rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .nav-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.4rem;
+  }
+  .nav-btn {
+    white-space: nowrap;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    min-height: auto;
+    display: inline-block;
+  }
+}
+
+.img-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.img-pair > img { width: 100%; }
+@media (min-width: 768px) {
+  .img-pair { flex-direction: row; gap: 0.75rem; }
+  .img-pair > img { width: 50%; }
+}
+
+@media (max-width: 640px) {
+  .tour-img { aspect-ratio: 4 / 3; }
+}
+
+.timeline-list { margin-left: 0.25rem; border-left-width: 2px; padding-left: 1rem; }
+.timeline-dot-wrap { left: -21px; }
+@media (min-width: 768px) {
+  .timeline-list { margin-left: 1.25rem; padding-left: 1.5rem; }
+  .timeline-dot-wrap { left: -31px; }
+}
+
+.day-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
+.day-tab { text-align: center; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+@media (min-width: 768px) {
+  .day-tabs { display: flex; gap: 0.5rem; }
+  .day-tab { display: inline-flex; min-height: auto; }
+}
+
+.stats-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+@media (min-width: 768px) {
+  .stats-bar { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+}
+
+@media (max-width: 420px) {
+  .flight-row { flex-wrap: wrap; row-gap: 0.75rem; }
+  .flight-row .flight-arrow { order: 3; width: 100%; }
+}
+</style>
+ </head>
+ <body class="h-full bg-white text-txt">
+  <div id="app" class="h-full overflow-auto w-full">
+
+   <!-- Hero -->
+   <header class="hero-bg text-white px-4 py-10 md:py-16 text-center relative z-10">
+    <div class="max-w-4xl mx-auto relative z-10">
+     <p class="text-sm tracking-[0.3em] uppercase opacity-80 mb-3">Bluefly Travel</p>
+     <div class="flex items-center justify-center gap-2 md:gap-3 mb-4">
+      <h1 class="font-display text-2xl md:text-5xl font-bold leading-tight">Finland – Estonia</h1>
+     </div>
+     <p class="text-lg md:text-xl opacity-90 font-light">8 Days 6 Nights</p>
+     <div class="flex items-center justify-center gap-4 mt-4 text-sm opacity-80">
+      <span>📅 30 August - 6 September 2026</span>
+     </div>
+     <div class="flex flex-wrap justify-center gap-2 mt-6">
+      <span class="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs">Finland</span>
+      <span class="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs">Estonia</span>
+      <span class="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs">✈️ Finnair (AY)</span>
+     </div>
+    </div>
+   </header>
+
+   <!-- Navigation -->
+   <nav class="sticky top-0 z-50 bg-white shadow-md border-b border-brand-light">
+    <div class="max-w-5xl mx-auto nav-grid p-2">
+     <button onclick="showSection('flights')" class="nav-btn active rounded-full font-medium text-brand border border-brand/20" data-nav="flights"><span class="hidden md:inline">✈️ </span>เที่ยวบิน</button>
+     <button onclick="showSection('itinerary')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="itinerary"><span class="hidden md:inline">📋 </span>โปรแกรมทัวร์</button>
+     <button onclick="showSection('country')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="country"><span class="hidden md:inline">🌎 </span>ข้อมูลประเทศ</button>
+     <button onclick="showSection('weather')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="weather"><span class="hidden md:inline">🌤️ </span>สภาพอากาศ</button>
+     <button onclick="showSection('clothing')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="clothing"><span class="hidden md:inline">👔 </span>การแต่งกาย</button>
+     <button onclick="showSection('prep')" class="nav-btn rounded-full font-medium text-brand border border-brand/20" data-nav="prep"><span class="hidden md:inline">🧳 </span>เตรียมตัวเดินทาง</button>
+    </div>
+   </nav>
+
+   <main class="max-w-5xl mx-auto px-4 py-8">
+
+    <!-- ========== FLIGHTS ========== -->
+    <section id="sec-flights" class="tab-section active fade-in">
+     <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">✈️ ข้อมูลเที่ยวบิน</h2>
+
+     <div class="bg-brand-50 border border-brand/20 rounded-2xl p-5 mb-6">
+      <h4 class="font-semibold text-brand-dark mb-2">📍 จุดนัดหมาย</h4>
+      <p class="text-sm text-subtle">04.00 น. คณะพร้อมกัน ณ สนามบินสุวรรณภูมิ อาคารผู้โดยสารขาออกระหว่างประเทศ ชั้น 4 ประตู 7 เคาน์เตอร์ N สายการบิน Finnair (AY) — เจ้าหน้าที่บริษัทบลูฟลาย ทราเวิล คอยให้การต้อนรับและอำนวยความสะดวก</p>
+     </div>
+
+     <div class="bg-brand-50 border border-brand/20 rounded-2xl p-5 mb-6">
+      <h4 class="font-semibold text-brand-dark mb-2">📞 หัวหน้าทัวร์</h4>
+  <p class="text-sm text-subtle">นาย ฉัตร์ณพัฒน์ ชาวหนองแขม (อาร์เทอร์) — โทร. 083-995-9366 / +44 7-4541-24677</p>
+ <p class="text-sm text-subtle">บริษัท Bluefly Travel — โทร. 02-164-1888 / 081-815-5599</p>
+</div>
+
+     <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
+      <h4 class="font-semibold text-amber-800 mb-3">🧳 ข้อมูลน้ำหนักกระเป๋า (ชั้นประหยัด)</h4>
+      <div class="grid md:grid-cols-2 gap-4 text-sm">
+       <div>
+        <p class="font-semibold text-amber-900 mb-2">🧳 กระเป๋าโหลดใต้เครื่อง</p>
+        <ul class="text-amber-700 space-y-1 text-xs">
+         <li>• 1 ใบ/ท่าน น้ำหนักไม่เกิน 23 kg</li>
+         <li>• ขนาดไม่เกิน 90 x 75 x 45 ซม.</li>
+        </ul>
+       </div>
+       <div>
+        <p class="font-semibold text-amber-900 mb-2">🎒 กระเป๋าถือขึ้นเครื่อง</p>
+        <ul class="text-amber-700 space-y-1 text-xs">
+         <li>• น้ำหนักไม่เกิน 8 kg</li>
+         <li>• ขนาดไม่เกิน 55 x 40 x 23 ซม.</li>
+        </ul>
+       </div>
+      </div>
+     </div>
+
+     <h3 class="font-semibold text-brand mb-3">🛫 ขาไป — 30 สิงหาคม 2569</h3>
+     <div class="space-y-4 mb-8">
+      <div class="bg-white border border-brand/20 rounded-2xl p-5 card-hover">
+       <div class="flex items-center gap-2 mb-3">
+        <span class="bg-brand text-white px-3 py-1 rounded-full text-xs font-semibold">AY 142</span> <span class="text-sm text-subtle">Finnair</span>
+       </div>
+       <div class="flex items-center gap-4 flight-row">
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">07:05</p>
+         <p class="text-sm font-medium">BKK</p>
+         <p class="text-xs text-subtle">กรุงเทพฯ</p>
+         <p class="text-xs text-subtle">30 ส.ค.</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center flight-arrow">
+         <p class="text-xs text-subtle mb-1">12 ชม. 20 นาที</p>
+         <div class="w-full flex items-center">
+          <div class="w-2 h-2 rounded-full bg-brand"></div>
+          <div class="flex-1 h-[2px] bg-gradient-to-r from-brand to-brand-dark"></div><span class="text-lg">✈️</span>
+         </div>
+        </div>
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">15:25</p>
+         <p class="text-sm font-medium">HEL</p>
+         <p class="text-xs text-subtle">เฮลซิงกิ</p>
+         <p class="text-xs text-subtle">30 ส.ค.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+
+     <h3 class="font-semibold text-brand mb-3">🛫 ขากลับ — 5 กันยายน 2569</h3>
+     <div class="space-y-4 mb-8">
+      <div class="bg-white border border-brand/20 rounded-2xl p-5 card-hover">
+       <div class="flex items-center gap-2 mb-3">
+        <span class="bg-brand text-white px-3 py-1 rounded-full text-xs font-semibold">AY 1016</span> <span class="text-sm text-subtle">Finnair</span>
+       </div>
+       <div class="flex items-center gap-4 flight-row">
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">10:10</p>
+         <p class="text-sm font-medium">TLL</p>
+         <p class="text-xs text-subtle">ทาลลินน์</p>
+         <p class="text-xs text-subtle">5 ก.ย.</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center flight-arrow">
+         <p class="text-xs text-subtle mb-1">30 นาที</p>
+         <div class="w-full flex items-center">
+          <div class="w-2 h-2 rounded-full bg-brand"></div>
+          <div class="flex-1 h-[2px] bg-gradient-to-r from-brand to-brand-dark"></div><span class="text-lg">✈️</span>
+         </div>
+        </div>
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">10:40</p>
+         <p class="text-sm font-medium">HEL</p>
+         <p class="text-xs text-subtle">เฮลซิงกิ</p>
+         <p class="text-xs text-subtle">5 ก.ย.</p>
+        </div>
+       </div>
+      </div>
+
+      <div class="flex justify-center">
+       <div class="bg-amber-50 border border-amber-200 rounded-full px-4 py-1 text-xs text-amber-700">
+        🔄 เปลี่ยนเครื่องที่เฮลซิงกิ
+       </div>
+      </div>
+
+      <div class="bg-white border border-brand/20 rounded-2xl p-5 card-hover">
+       <div class="flex items-center gap-2 mb-3">
+        <span class="bg-brand text-white px-3 py-1 rounded-full text-xs font-semibold">AY 141</span> <span class="text-sm text-subtle">Finnair</span>
+       </div>
+       <div class="flex items-center gap-4 flight-row">
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">14:15</p>
+         <p class="text-sm font-medium">HEL</p>
+         <p class="text-xs text-subtle">เฮลซิงกิ</p>
+         <p class="text-xs text-subtle">5 ก.ย.</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center flight-arrow">
+         <p class="text-xs text-subtle mb-1">11 ชม. 15 นาที</p>
+         <div class="w-full flex items-center">
+          <div class="w-2 h-2 rounded-full bg-brand"></div>
+          <div class="flex-1 h-[2px] bg-gradient-to-r from-brand to-brand-dark"></div><span class="text-lg">✈️</span>
+         </div>
+        </div>
+        <div class="text-center">
+         <p class="text-2xl font-bold text-brand-dark">05:30 (+1)</p>
+         <p class="text-sm font-medium">BKK</p>
+         <p class="text-xs text-subtle">กรุงเทพฯ</p>
+         <p class="text-xs text-subtle">6 ก.ย.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+
+    <!-- ========== ITINERARY ========== -->
+    <section id="sec-itinerary" class="tab-section fade-in">
+     <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">📋 โปรแกรมทัวร์</h2>
+     <div class="day-tabs mb-6">
+      <button onclick="showDay(1)" class="day-tab active-day px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 1</button>
+      <button onclick="showDay(2)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 2</button>
+      <button onclick="showDay(3)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 3</button>
+      <button onclick="showDay(4)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 4</button>
+      <button onclick="showDay(5)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 5</button>
+      <button onclick="showDay(6)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 6</button>
+      <button onclick="showDay(7)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 7</button>
+      <button onclick="showDay(8)" class="day-tab px-4 py-2 text-sm font-medium rounded-full border border-brand/20">วันที่ 8</button>
+     </div>
+
+     <!-- ===== DAY 1 ===== -->
+     <div id="day-1" class="day-content w-full">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">1</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันอาทิตย์ที่ 30 สิงหาคม 2569</h3>
+         <p class="text-sm text-subtle">กรุงเทพฯ → เฮลซิงกิ (สาธารณรัฐฟินแลนด์)</p>
+        </div>
+        <span class="ml-auto text-2xl">✈️</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">04:00 น.</span> — คณะพร้อมกันที่สนามบินสุวรรณภูมิ อาคารผู้โดยสารขาออก ชั้น 4 ประตู 7 เคาน์เตอร์ N สายการบิน Finnair (AY) เจ้าหน้าที่บริษัทบลูฟลาย ทราเวิล คอยให้การต้อนรับและอำนวยความสะดวก</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">07:05 น.</span> — ✈️ ออกเดินทางสู่สนามบินเฮลซิงกิ โดยสายการบิน Finnair (AY) เที่ยวบินที่ AY 142</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">15:25 น.</span> — ✈️ คณะเดินทางถึงสนามบินเฮลซิงกิ สาธารณรัฐฟินแลนด์ หลังผ่านพิธีการตรวจคนเข้าเมืองและรับสัมภาระเรียบร้อย</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารค่ำในโรงแรม</p>
+        </div>
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Original Sokos Hotel Presidentti </strong>
+       </div>
+      </div>
+     </div> <!-- /day-1 -->
+
+     <!-- ===== DAY 2 ===== -->
+     <div id="day-2" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">2</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันจันทร์ที่ 31 สิงหาคม 2569</h3>
+         <p class="text-sm text-subtle">เฮลซิงกิ</p>
+        </div>
+        <span class="ml-auto text-2xl">🎓</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารเช้าในโรงแรม</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🎓 มหาวิทยาลัยอาลโต (Aalto University)</p>
+          <p class="text-subtle mt-1">คณะศึกษาดูงานมหาวิทยาลัยอาลโต มหาวิทยาลัยอันดับ 1 ของฟินแลนด์ที่เกิดจากการควบรวมสถาบันระดับท็อปด้านเทคโนโลยี (Tech) บริหารธุรกิจ (Business) และศิลปะการออกแบบ (Art & Design) เข้าด้วยกัน โดดเด่นที่สุดในเรื่องของ Ecosystem ด้านนวัตกรรมและการสร้าง Start-up ระดับโลก</p>
+          <div class="mt-3">
+           <img src="https://www.aalto.fi/sites/default/files/styles/1_6_567w_354h_n/public/2023-10/A-logo_around_Campus_12-6-2020_photo_Mikko_Raskinen_063_Original_0.jpg?h=07843702&itok=Q6VBMBpz" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+         </div>
+        </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารกลางวันภายในมหาวิทยาลัยอาลโต — Ravintola Arvo</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🌲 New Wood Exhibition</p>
+          <p class="text-subtle mt-1">คณะศึกษาดูงานโครงการ New Wood (Uusi puu) โครงการริเริ่มและเครือข่ายความร่วมมือในประเทศฟินแลนด์ที่มุ่งเน้นการจัดแสดงและส่งเสริมนวัตกรรม ผลิตภัณฑ์ และโซลูชันที่ทำจากไม้และเส้นใยไม้ (Bio-based products) เพื่อทดแทนพลาสติกและฟอสซิล ขับเคลื่อนเศรษฐกิจหมุนเวียน (Bioeconomy)</p>
+          <div class="mt-3">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3kpqx8AMDQtkXUs6aNNGl8eDrXigMJwWMisjvGq2EgeT8X-EiwmgkycvG&s=10" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+         </div>
+        </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">⛪ มหาวิหารเฮลซิงกิ (Helsinki Cathedral)</p>
+          <p class="text-subtle mt-1">ชมมหาวิหารเฮลซิงกิ โบสถ์ลูเธอรัน ออกแบบโดยสถาปนิก Carl Ludvig Engel ในสไตล์นีโอคลาสสิก สร้างขึ้นระหว่างปี ค.ศ. 1830–1852 ตั้งตระหง่านเหนือจัตุรัสวุฒิสภา (Senate Square) ศูนย์กลางทางประวัติศาสตร์ สถาปัตยกรรม และวัฒนธรรมของเมือง</p>
+          <div class="mt-3">
+           <img src="https://thehiddennorth.com/wp-content/uploads/2023/10/Helsinki.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+         </div>
+        </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🏛️ ทำเนียบรัฐบาลฟินแลนด์ (The Government Palace)</p>
+          <p class="text-subtle mt-1">ชมทำเนียบรัฐบาลฟินแลนด์ อาคารสำคัญทางประวัติศาสตร์และการเมืองที่ยิ่งใหญ่ที่สุดแห่งหนึ่ง เดิมเคยเป็นที่ทำการของสภาแห่งจักรวรรดิรัสเซีย ก่อนเปลี่ยนเป็นทำเนียบรัฐบาลหลังฟินแลนด์ประกาศอิสรภาพในปี ค.ศ. 1917</p>
+          <div class="mt-3">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Valtioneuvoston_linna.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+         </div>
+        </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🎼 อนุสาวรีย์ซิเบลิอุส (Sibelius Monument)</p>
+          <p class="text-subtle mt-1">ชมอนุสาวรีย์ที่สร้างขึ้นเพื่อเป็นอนุสรณ์และสดุดีแด่ ฌ็อง ซิเบลิอุส (ค.ศ. 1865–1957) คีตกวีชาวฟินแลนด์ระดับโลก สร้างจากท่อเหล็กกล้าไร้สนิมกว่า 600 แท่ง เชื่อมต่อกันในลักษณะลดหลั่นไล่ระดับคล้ายไปป์ออร์แกนขนาดยักษ์</p>
+          <div class="mt-3">
+           <img src="https://images.trvl-media.com/place/501178/3b72518f-1858-4ef3-a34f-0c14cfbcaacc.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+         </div>
+        </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Restaurant Zetor</p>
+          <p class="text-subtle mt-1">Menu: Grilled Salmon with Dill Potatoes and Hollandaise Sauce, Blueberry Pie with Vanilla Mousse</p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Original Sokos Hotel Presidentti </strong>
+       </div>
+      </div>
+     </div><!-- /day-2 -->
+
+     <!-- ===== DAY 3 ===== -->
+     <div id="day-3" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">3</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันอังคารที่ 1 กันยายน 2569</h3>
+         <p class="text-sm text-subtle">เฮลซิงกิ</p>
+        </div>
+        <span class="ml-auto text-2xl">🏥</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารเช้าในโรงแรม</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🏥 เมฮิไลเนน กรุ๊ป (Mehiläinen Group)</p>
+          <p class="text-subtle mt-1">คณะศึกษาดูงาน เมฮิไลเนน กรุ๊ป (Mehiläinen Group) เป็นผู้ให้บริการทางการแพทย์และบริการดูแลทางสังคม (Healthcare and Social Care) ภาคเอกชนที่ใหญ่ที่สุดและเก่าแก่ที่สุดแห่งหนึ่งในประเทศฟินแลนด์ รวมถึงเป็นผู้นำด้านนวัตกรรมดิจิทัลเฮลธ์แคร์ (Digital Healthcare) ในภูมิภาคยุโรปเหนือ ปีที่ก่อตั้ง ค.ศ. 1909 (พ.ศ. 2452) มีอายุเก่าแก่กว่า 116 ปี จุดเด่นที่สุดที่ทำให้กลุ่มทุนนี้เป็นผู้นำระดับสากลคือ เทคโนโลยีการแพทย์</p>
+          <ul class="text-subtle mt-2 text-xs space-y-1 list-disc list-inside">
+           <li><strong>OmaMehiläinen & Digital Clinic:</strong> แพลตฟอร์มดิจิทัลและแอปพลิเคชันที่มีผู้ลงทะเบียนใช้งานนับล้านคน ให้บริการปรึกษาแพทย์ทางไกล (Telemedicine) แบบ 24/7 บริหารจัดการประวัติการรักษา และสั่งยาออนไลน์ได้อย่างรวดเร็ว</li>
+           <li><strong>BeeHealthy:</strong> เป็นบริษัทลูกที่ Mehiläinen ตั้งขึ้นมาเพื่อพัฒนาซอฟต์แวร์และระบบ Digital Health ขยายขายลิขสิทธิ์แบบ SaaS (Software as a Service) ให้แก่โรงพยาบาลและผู้ให้บริการสาธารณสุขรายอื่น ๆ ทั่วโลก</li>
+          </ul>
+          <div class="mt-3">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVliSM-yVcV79L_CgNJZNSdOXuWDkTlZCc_NEKPBngEedwzGnxPHaqDQxm&s=10" loading="lazy" class="tour-img" alt="Mehiläinen Group">
+          </div>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Restaurant Konnichiwa - Buffet</p>
+          <p class="text-subtle mt-1">Cold & Hot Dishes / Main: Sushi and Hot Buffet Dishes / Dessert: Fruits</p>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🚤 ล่องเรือ (Waterbus) สู่ป้อมปราการซูโอเมนลินนา (Suomenlinna Fortress)</p>
+          <p class="text-subtle mt-1">หนึ่งในสถานที่ท่องเที่ยวที่มีชื่อเสียงและสำคัญทางประวัติศาสตร์มากที่สุดของฟินแลนด์ ได้รับการขึ้นทะเบียนเป็นมรดกโลกโดยยูเนสโกตั้งแต่ปี ค.ศ. 1991 นำคณะชมภาพยนตร์จัดแสดง ณ พิพิธภัณฑ์ซูโอเมนลินนา ถ่ายทอดเรื่องราวการก่อสร้างป้อมปราการทางทะเล ผ่าน 3 ยุคสมัย (สวีเดน รัสเซีย และฟินแลนด์ปัจจุบัน)</p>
+          <div class="mt-3">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5DTHYgpc8d6edCrpLk7cdcLit2jTVSHdzgLQe_nyg1z91Ivb75ptK_MDW&s=10" loading="lazy" class="tour-img" alt="Suomenlinna Fortress">
+          </div>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Restaurant Gillet Bar & Bistro</p>
+          <p class="text-subtle mt-1">Entree: Shrimp 'Skagen' and malted rye bread with iced fennel and dill oil / Main: Slow-cooked beef brisket with roasted celeriac, potato terrine and thyme–red wine sauce / Dessert: Chocolate cake with marinated blackberries and mascarpone mousse</p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Original Sokos Hotel Presidentti </strong>
+       </div>
+      </div>
+     </div><!-- /day-3 -->
+
+     <!-- ===== DAY 4 ===== -->
+     <div id="day-4" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">4</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันพุธที่ 2 กันยายน 2569</h3>
+         <p class="text-sm text-subtle">เฮลซิงกิ</p>
+        </div>
+        <span class="ml-auto text-2xl">📡</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารเช้าในโรงแรม</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">📡 Elisa Corporation (EFQM Global Award 2021)</p>
+          <p class="text-subtle mt-1">คณะศึกษาดูงาน Elisa Corporation (EFQM Global Award 2021) เป็นบริษัทโทรคมนาคมสัญชาติฟินแลนด์ (Finland) ที่สร้างประวัติศาสตร์ในระดับสากล โดยเป็น ผู้ให้บริการโทรคมนาคม (Telecom Operator) รายแรกของโลก ที่ได้รับการรับรองระดับ 6 ดาว (6 Stars) จากรางวัล EFQM Global Award 2021 ซึ่งจัดโดยมูลนิธิเพื่อการจัดการคุณภาพแห่งยุโรป (European Foundation for Quality Management)</p>
+          <div class="mt-3">
+           <img src="https://suomimobiili.fi/wp-content/uploads/2019/09/Elisa_5G_hero.jpg" loading="lazy" class="tour-img" alt="Suomenlinna Fortress">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Restaurant La Famiglia</p>
+          <p class="text-subtle mt-1">Entree: Tomato-basil soup, bread & butter / Main: Chicken with seasonal vegetables, thyme-red wine sauce and fried potatoes / Dessert: Strawberry-raspberry sorbet</p>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🌲 Metsä Fibre (Espoo) — EFQM Global Award 2022</p>
+          <p class="text-subtle mt-1">คณะศึกษาดูงาน Metsa Fibre (Espoo) EFQM Global Award 2022) เป็นบริษัทผู้ผลิตเยื่อกระดาษ (Pulp) และผลิตภัณฑ์ไม้แปรรูปรายใหญ่ระดับโลกจากประเทศฟินแลนด์ โดยมีสำนักงานใหญ่ตั้งอยู่ที่เมือง Espoo (เอสโป) เป็นบริษัทฟินแลนด์แห่งแรก ที่สามารถคว้าการรับรองในระดับสูงสุดนี้มาครองได้สำเร็จ ซึ่งสะท้อนถึงการเป็นองค์กรที่มีผลการดำเนินงานเป็นเลิศและมีความยั่งยืนในระดับสากล</p>
+          <div class="mt-3">
+           <img src="https://www.metsagroup.com/globalassets/metsa-fibre/images/about-us/pulp-production/kemi/mf-kemi-2023-dji_0184__web-1.jpg" loading="lazy" class="tour-img" alt="Metsä Fibre Espoo">
+          </div>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Restaurant Strindberg</p>
+          <p class="text-subtle mt-1">Wild duck two ways, carrots with chervil and wild duck broth / Roasted trout with fregola pasta and shellfish broth / Raw chocolate pie with raspberry and lemon sorbet</p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Original Sokos Hotel Presidentti </strong>
+       </div>
+      </div>
+     </div><!-- /day-4 -->
+
+     <!-- ===== DAY 5 ===== -->
+     <div id="day-5" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">5</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันพฤหัสบดีที่ 3 กันยายน 2569</h3>
+         <p class="text-sm text-subtle">เฮลซิงกิ → ทาลลินน์ (สาธารณรัฐเอสโตเนีย)</p>
+        </div>
+        <span class="ml-auto text-2xl">⛴️</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารเช้าในโรงแรม</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">📚 ห้องสมุดโอดิ (Helsinki Central Library Oodi)</p>
+          <p class="text-subtle mt-1">ห้องสมุดเออดี้ (Helsinki Central Library Oodi) ห้องสมุดไฮเทคแห่งใหม่ของเฮลซิงกิถูกออกแบบและสร้างได้อย่างสวยงาม ภายในมีหนังสือต่างๆ กว่า 1 แสนเล่ม มีพื้นที่สำหรับดูภาพยนตร์ สตูดิโอเล็กๆ ไว้เป็นพื้นที่สำหรับอัดเสียง มีห้อง 3D Printers ที่มีไว้ให้บริการสำหรับนักสร้างสรรค์ Oodi ใช้หุ่นยนต์ขับเคลื่อนอัตโนมัติ (AGVs) ในการลำเลียงหนังสือจากจุดคืนหนังสือขึ้นมายังชั้น 3 เพื่อให้บรรณารักษ์จัดขึ้นชั้น ช่วยลดภาระงานหนักและทำให้บรรณารักษ์มีเวลาดูแลผู้ใช้บริการมากขึ้น</p>
+          <div class="mt-3">
+           <img src="https://www.thisiscolossal.com/wp-content/uploads/2019/11/helsinki-1.jpg" loading="lazy" class="tour-img" alt="Helsinki Oodi Library">
+          </div>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">⛪ โบสถ์หินเทมเปอเลียวคิโอ (Temppeliaukio Church)</p>
+          <p class="text-subtle mt-1">ชม โบสถ์หินเทมเปอเลียวคิโอ (Temppeliaukio) หรือที่รู้จักกันในนามโบสถ์หิน หรืออีกชื่อหนึ่งคือโบสถ์แห่งความรัก ถูกสร้างขึ้นเมื่อวันที่ 14 กุมภาพันธ์ ปีค.ศ. 1968 ถูกสร้างขึ้นอย่างแปลกตาไม่เหมือนโบสถ์ทั่วไป โดยการขุดเจาะในซอกหินแกรนิตอันอลังการ หากท่านได้เห็นภาพถ่ายทางอากาศ โบสถ์หินแห่งนี้จะมีรูปร่างคล้ายจานบิน</p>
+          <div class="mt-3">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAan6WHnyDghVFcchIsvf_s-RQ6HbYs6n6t2zgoG9jnovy1J63SFS_JNY2&s=10" loading="lazy" class="tour-img" alt="Temppeliaukio Rock Church">
+          </div>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">นำคณะเดินทางสู่ท่าเรือเฮลซิงกิ</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">13:30 น.</span> — ⛴️ คณะออกเดินทางสู่เมืองทาลลินน์ (Tallinn) สาธารณรัฐเอสโตเนีย โดยเรือสำราญ Megastar - Silja Line</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารกลางวันบนเรือ (Buffet)</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🏙️ เมืองทาลลินน์ (Tallinn)</p>
+          <p class="text-subtle mt-1"><span class="font-semibold text-brand">15:30 น.</span> เดินทางถึงเมืองทาลลินน์ (Tallinn) เป็นเมืองหลวงและเมืองท่าที่สำคัญที่สุดของเอสโตเนียซึ่งเมืองนี้ผ่านการครอบครองโดยหลายเชื้อชาติในอดีตไม่ว่าจะเป็นเดนมาร์ค สวีเดน รัสเซีย และได้เป็นอิสระจากสหภาพโซเวียตเมื่อปี ค.ศ. 1994</p>
+          <div class="mt-3">
+           <img src="https://res.cloudinary.com/odysseytraveller/image/fetch/f_auto,q_auto,dpr_auto,r_4,w_765,h_535.5,c_limit/https://cdn.odysseytraveller.com/app/uploads/2020/03/GettyImages-487525618.jpg" loading="lazy" class="tour-img" alt="Tallinn Estonia">
+          </div>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Peppersack Restaurant</p>
+          <p class="text-subtle mt-1">Traditional creamy fish soup with herbs, bread and butter / Main: Pork loin fillet with fried potatoes, grilled vegetables and mustard sauce / Dessert: A slice of Peppersack's legendary braided kringle with cinnamon-raisins filling and chocolate-nuts coating</p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Radisson Blu Hotel Olümpia </strong>
+       </div>
+      </div>
+     </div><!-- /day-5 -->
+
+     <!-- ===== DAY 6 ===== -->
+     <div id="day-6" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">6</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันศุกร์ที่ 4 กันยายน 2569</h3>
+         <p class="text-sm text-subtle">ทาลลินน์</p>
+        </div>
+        <span class="ml-auto text-2xl">🏰</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารเช้าในโรงแรม</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">💻 E-Estonia Briefing Centre</p>
+          <p class="text-subtle mt-1">คณะศึกษาดูงาน E -Estonia Briefing Centre ศูนย์บรรยายเกี่ยวกับอิเล็กทรอนิกส์ของเอสโตเนีย เป็นศูนย์บริหารและศูนย์กลางนวัตกรรมในทาลลินน์ ซึ่งคิดค้น มาเป็นพิเศษเพื่อให้ได้รับประสบการณ์ที่สัมผัสกับสภาพจิตใจ ก่อตั้งขึ้นในปี2009 ในฐานะองค์กรพัฒนาเอกชน ปัจจุบันเป็นส่วนหนึ่งของ ENTERPRISE ESTONIA และมีบทบาทสำคัญในการส่งเสริมแบรนด์และประเทศของ  นำเสนอกรอบแนวคิดของE-ESTONIA และยังทำหน้าที่เป็นผู้ประสานงานระหว่าง G2G, B2G และความสัมพันธ์ B2B อีกทั้งยังเป็นเจ้าภาพในการต้อนรับ ประธานาธิบดี, รัฐมนตรี, ผู้มีอำนาจตัดสินใจระดับสูงจากภาครัฐและเอกชน, นักลงทุนและสื่อต่างประเทศ</p>
+          <div class="mt-3">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6zbBnI4U0Zk8LVzoNNd0X1xGt8vhPJQiWRlWP8TDs1g&s=10" loading="lazy" class="tour-img" alt="e-Estonia Briefing Centre">
+          </div>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Restaurant Nok Nok</p>
+          <p class="text-subtle mt-1">Entree: Spicy prawn soup / Main: Spicy minced chicken salad, golden deep-fried fish sautéed in sweet and sour sauce with pineapple and vegetables, Thai omelet, crispy pork belly with broccoli, panang curry with pork, rice / Dessert: Fruit</p>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🏛️ เขตเมืองเก่าของทาลลินน์ (Old Town Square)</p>
+          <p class="text-subtle mt-1">เขตเมืองเก่าของทาลลินน์ (Old Town Square) ที่ได้รับการยกย่องว่าเป็นเมืองแห่งยุคกลางที่สวยที่สุดในยุโรปเหนือ ย่านศูนย์กลางของเมือง ในอดีตเป็นสถานที่ซื้อขายแลกเปลี่ยนสินค้า ใช้เป็นที่เฉลิมฉลองเทศกาลต่างๆ ของเมือง รวมทั้งเป็นที่ประหารชีวิตนักโทษอีกด้วย</p>
+          <div class="mt-3">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMloBoo2LwfSlLDKKww6mI-4y0klj2ij0TJPpJ6olS7xIU59CIIkH5pyI&s=10" loading="lazy" class="tour-img" alt="Tallinn Old Town">
+          </div>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🏯 ย่านทูมเปีย (Toompea) - ปราสาททูมเปีย</p>
+          <p class="text-subtle mt-1">ชม ย่านทูมเปีย (Toompea) จากการที่อดีตเคยเป็นย่านอยู่อาศัยของคนร่ำรวยระดับเจ้าเมือง เหล่าขุนนางและพ่อค้า วาณิชทั้งหลาย ทำให้ปัจจุบันนี้ในย่านทูมเปียจึงเต็มไปด้วยปราสาทเก่าสูงใหญ่ซึ่งเคยเป็นบ้านพักของเจ้า เมืองเดิมในอดีต ซึ่งเป็นที่ตั้งของ ปราสาททูมเปีย (Toompea Castle) ปัจจุบัน ได้ใช้เป็นอาคารรัฐสภาและหน่วยงานราชการ</p>
+          <div class="mt-3">
+           <img src="https://www.revisitinghistory.com/wp-content/uploads/2022/02/aerial-view-of-the-side-of-toompea-castle-1024x512.jpg" loading="lazy" class="tour-img" alt="Tallinn Old Town">
+          </div>
+         </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">⛪ อารามโดมินิกัน และโบสถ์อเล็กซานเดอร์เนฟสกี</p>
+          <p class="text-subtle mt-1">ผ่านชม อารามโดมินิกัน (The Latin Dominician) ที่สร้างขึ้นตั้งในศตวรรษที่13 โบสถ์อเล็กซานเดอร์เนฟสกี้ (Alexander Nevsky Cathedral) โบสถ์รัสเซียนออร์โธดอกซ์ที่ใหญ่ที่สุดในเอสโตเนีย เป็นสถาปัตยกรรมที่สวยงามมาก แล้วเดินลัดเลาะแนวกำแพงเมืองสู่จัตุรัสกลางเมืองอันเป็นที่ตั้งของศาลากลางรายล้อมด้วยอาคารที่ต่างยุคสมัยกันตั้งแต่ศตวรรษที่ 15-17</p>
+          <div class="mt-3">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHx9DKc1dJVmHPagLbhDEJnEGvkJrfUWCLXbKe7YLP-Birhc0R87NKja8&s=10" loading="lazy" class="tour-img" alt="Alexander Nevsky Cathedral Tallinn">
+          </div>
+         </div>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Restaurant Farm</p>
+          <p class="text-subtle mt-1">Entree: Smoked eggplant, prosciutto, roasted bell pepper, pickled red onion, goat milk yogurt sauce, homemade bread, sea salt butter / Main: Grilled duck breast, celery root puree, yellow beets with thyme, pak choi, duck jus sauce with apricots / Dessert: Cheesecake, forest berries sauce</p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
+        <span>🏨</span> <strong>นำคณะเข้าสู่ที่พัก Radisson Blu Hotel Olümpia </strong>
+       </div>
+      </div>
+     </div><!-- /day-6 -->
+
+     <!-- ===== DAY 7 ===== -->
+     <div id="day-7" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">7</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันเสาร์ที่ 5 กันยายน 2569</h3>
+         <p class="text-sm text-subtle">ทาลลินน์ (สาธารณรัฐเอสโตเนีย) → เฮลซิงกิ (สาธารณรัฐฟินแลนด์) → กรุงเทพฯ</p>
+        </div>
+        <span class="ml-auto text-2xl">✈️</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารเช้าในโรงแรม</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">นำคณะเดินทางสู่สนามบินทาลลินน์</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">10:10 น.</span> — ✈️ ออกเดินทางสู่สนามบินเฮลซิงกิ โดยสายการบิน Finnair (AY) เที่ยวบินที่ AY 1016</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">10:40 น.</span> — ✈️ คณะเดินทางถึงสนามบินเฮลซิงกิ เพื่อเปลี่ยนเครื่อง</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">14:15 น.</span> — ✈️ ออกเดินทางสู่สนามบินสุวรรณภูมิ โดยสายการบิน Finnair (AY) เที่ยวบินที่ AY 141</p>
+        </div>
+       </div>
+      </div>
+     </div><!-- /day-7 -->
+
+     <!-- ===== DAY 8 ===== -->
+     <div id="day-8" class="day-content" style="display:none;">
+      <div class="day-card bg-white rounded-2xl p-6 shadow-sm border border-brand/10">
+       <div class="flex items-center gap-3 mb-4">
+        <span class="bg-brand text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">8</span>
+        <div>
+         <h3 class="font-semibold text-lg">วันอาทิตย์ที่ 6 กันยายน 2569</h3>
+         <p class="text-sm text-subtle">กรุงเทพฯ</p>
+        </div>
+        <span class="ml-auto text-2xl">🛫</span>
+       </div>
+       <div class="space-y-4 ml-5 border-l-2 border-brand/20 pl-6">
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm"><span class="font-semibold text-brand">05:30 น.</span> — ✈️ คณะเดินทางถึงสนามบินสุวรรณภูมิโดยสวัสดิภาพ</p>
+        </div>
+       </div>
+      </div>
+     </div><!-- /day-8 -->
+
+    </section>
+
+    <!-- ========== COUNTRY INFO ========== -->
+    <section id="sec-country" class="tab-section fade-in">
+     <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">🌎 ข้อมูลประเทศฟินแลนด์และเอสโตเนีย</h2>
+     <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
+       <h3 class="font-semibold text-brand-dark mb-3 text-lg">🇫🇮 สาธารณรัฐฟินแลนด์</h3>
+       <div class="space-y-2 text-sm">
+        <div class="flex justify-between"><span class="text-subtle">เมืองหลวง</span><span class="font-medium">เฮลซิงกิ (Helsinki)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">สกุลเงิน</span><span class="font-medium">ยูโร (EUR)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">เวลาท้องถิ่น</span><span class="font-medium">UTC/GMT+2 (ช้ากว่าไทย 5 ชม.)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">ปลั๊กไฟ</span><span class="font-medium">แบบยุโรป กลมสองขา (230V/50Hz)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">รหัสโทรศัพท์</span><span class="font-medium">+358</span></div>
+       </div>
+      </div>
+      <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
+       <h3 class="font-semibold text-brand-dark mb-3 text-lg">🇪🇪 สาธารณรัฐเอสโตเนีย</h3>
+       <div class="space-y-2 text-sm">
+        <div class="flex justify-between"><span class="text-subtle">เมืองหลวง</span><span class="font-medium">ทาลลินน์ (Tallinn)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">สกุลเงิน</span><span class="font-medium">ยูโร (EUR)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">เวลาท้องถิ่น</span><span class="font-medium">UTC/GMT+2 (ช้ากว่าไทย 5 ชม.)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">ปลั๊กไฟ</span><span class="font-medium">แบบยุโรป กลมสองขา (230V/50Hz)</span></div>
+        <div class="flex justify-between"><span class="text-subtle">รหัสโทรศัพท์</span><span class="font-medium">+372</span></div>
+       </div>
+      </div>
+     </div>
+
+     <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10 mb-6">
+      <h3 class="font-semibold text-brand-dark mb-3 text-lg">💶 เงินตราและอัตราแลกเปลี่ยน</h3>
+      <div class="text-sm space-y-2">
+       <p class="text-subtle">ฟินแลนด์และเอสโตเนียใช้สกุลเงินยูโร (EUR) เหมือนกัน</p>
+       <div class="flex justify-between"><span class="text-subtle">ธนบัตรยูโร</span><span class="font-medium">5, 10, 20, 50, 100, 200, 500 EURO</span></div>
+       <div class="flex justify-between"><span class="text-subtle">เหรียญยูโร</span><span class="font-medium">1, 2, 5, 10, 20, 50 เซนต์, 1 และ 2 EURO</span></div>
+       <div class="flex justify-between"><span class="text-subtle">อัตราแลกเปลี่ยน</span><span class="font-medium">1 EURO ≈ 38.30 บาทไทย</span></div>
+       <div class="flex justify-between"><span class="text-subtle">บัตรเครดิตที่ใช้ได้</span><span class="font-medium">Mastercard, Visa, American Express</span></div>
+      </div>
+      <div class="mt-3 bg-white/60 rounded-lg p-2 text-xs text-subtle">💡 ฟินแลนด์ไม่ใช้เหรียญ 1 เซนต์ กรณีจ่ายเงินสด ถ้าราคาแจ้ง 5.99 € ต้องจ่าย 6 € ไม่มีธรรมเนียมการให้ทิปในร้านอาหาร จึงไม่มีเซอร์วิสชาร์จและไม่จำเป็นต้องให้ทิป</div>
+     </div>
+
+     <div class="mt-6 bg-amber-50 border border-amber-200 rounded-2xl p-5">
+      <h4 class="font-semibold text-amber-800 mb-3">⚠️ สิ่งที่ควรรู้และมารยาททางวัฒนธรรม</h4>
+      <ul class="text-sm text-amber-700 space-y-2">
+       <li>• <strong>ไม่นิยมให้ทิป:</strong> ในฟินแลนด์ไม่มีธรรมเนียมการให้ทิปตามร้านอาหาร ไม่ถือว่าเสียมารยาท</li>
+       <li>• <strong>การแยกขยะ:</strong> ประชาชนฟินแลนด์มีการแยกประเภทขยะตั้งแต่ที่บ้าน มีวินัยสูง</li>
+      
+       <li>• <strong>ไม่ให้อาหารสัตว์ป่า:</strong> เช่น หมี หมาป่า และกวางมูส เพราะจะทำให้สัตว์ไม่ระวังตัวต่อมนุษย์และอาจเป็นอันตราย</li>
+       <li>• <strong>ระวังทรัพย์สิน:</strong> ทุกเมืองมักมีนักฉวยโอกาส วิ่งราว และล้วงกระเป๋า ควรระวังพาสปอร์ตและของมีค่าตลอดเวลา</li>
+      </ul>
+     </div>
+
+     <div class="grid md:grid-cols-2 gap-4 mt-6">
+      <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
+       <h4 class="font-semibold text-brand-dark mb-3">💰 การขอคืนภาษี (Tax Refund)</h4>
+       <ul class="text-sm text-subtle space-y-2">
+        <li>• ฟินแลนด์: ซื้อสินค้าหรือบริการขั้นต่ำ 40 ยูโร</li>
+        <li>• เอสโตเนีย: ซื้อสินค้าขั้นต่ำ 38.01 ยูโร</li>
+        <li>• ขอแบบฟอร์ม DETAXE พร้อมเก็บใบเสร็จไว้เพื่อใช้เรียกภาษีคืนที่สนามบิน</li>
+        <li>• ต้องพกพาสปอร์ตติดตัวเวลาซื้อสินค้า และเช็คป้าย TAX FREE เช่น Global Blue Tax Free ที่หน้าร้าน</li>
+        <li>• ใบเคลมภาษีต้องผ่านการประทับตราและสำแดงสินค้าที่สนามบินก่อนนำไปหยอดตู้หรือรับเงินคืน</li>
+       </ul>
+      </div>
+      <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10">
+       <h4 class="font-semibold text-brand-dark mb-3">📱 ข้อมูลทั่วไปที่ควรรู้</h4>
+       <ul class="text-sm text-subtle space-y-2">
+        <li>• น้ำแร่หาซื้อได้ตามร้านสะดวกซื้อทั่วไป</li>
+        <li>• การนำเครื่องดื่มแอลกอฮอล์เข้าไปในร้าน ทางร้านมักเก็บค่าบริการเปิดขวด</li>
+        <li>• ไม่ควรเก็บทรัพย์สินมีค่าไว้ในห้องพักหรือกระเป๋าเดินทาง</li>
+        <li>• ควรถ่ายสำเนาหนังสือเดินทางเก็บแยกไว้ต่างหาก</li>
+       </ul>
+      </div>
+     </div>
+    </section>
+
+    <!-- ========== WEATHER ========== -->
+    <section id="sec-weather" class="tab-section fade-in">
+     <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-2">🌤️ สภาพอากาศและอุณหภูมิ</h2>
+     <p class="text-sm text-subtle mb-6">คาดการณ์สภาพอากาศโดยอ้างอิงค่าเฉลี่ยภูมิอากาศจาก <a href="https://www.accuweather.com" target="_blank" rel="noopener noreferrer" class="text-brand underline">accuweather.com</a></p>
+
+     <h3 class="font-semibold text-brand-dark mb-3">เฮลซิงกิ (วันที่ 1–5)</h3>
+     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
+      <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+       <p class="text-xs text-subtle">30 ส.ค. (วันที่ 1)</p>
+       <div class="weather-icon my-2">⛅</div>
+       <p class="text-2xl font-bold text-brand-dark">18°<span class="text-base font-normal text-subtle">/14°C</span></p>
+       <p class="text-xs text-subtle mt-1">มีเมฆมาก</p>
+      </div>
+      <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+       <p class="text-xs text-subtle">31 ส.ค. (วันที่ 2)</p>
+       <div class="weather-icon my-2">☀️</div>
+       <p class="text-2xl font-bold text-brand-dark">17°<span class="text-base font-normal text-subtle">/14°C</span></p>
+       <p class="text-xs text-subtle mt-1">มีแดดจัด</p>
+      </div>
+      <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+       <p class="text-xs text-subtle">1 ก.ย. (วันที่ 3)</p>
+       <div class="weather-icon my-2">🌤️</div>
+       <p class="text-2xl font-bold text-brand-dark">17°<span class="text-base font-normal text-subtle">/13°C</span></p>
+       <p class="text-xs text-subtle mt-1">แดดจัดเป็นบางส่วน</p>
+      </div>
+      <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+       <p class="text-xs text-subtle">2 ก.ย. (วันที่ 4)</p>
+       <div class="weather-icon my-2">🌤️</div>
+       <p class="text-2xl font-bold text-brand-dark">16°<span class="text-base font-normal text-subtle">/8°C</span></p>
+       <p class="text-xs text-subtle mt-1">แดดจัดเป็นบางส่วน</p>
+      </div>
+      <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+       <p class="text-xs text-subtle">3 ก.ย. (วันที่ 5)</p>
+       <div class="weather-icon my-2">⛅</div>
+       <p class="text-2xl font-bold text-brand-dark">16°<span class="text-base font-normal text-subtle">/9°C</span></p>
+       <p class="text-xs text-subtle mt-1">แดดจัดเป็นบางส่วน มีเมฆบางส่วน</p>
+      </div>
+     </div>
+
+     <h3 class="font-semibold text-brand-dark mb-3">ทาลลินน์ (วันที่ 5–7)</h3>
+     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+      <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+       <p class="text-xs text-subtle">3 ก.ย. (วันที่ 5)</p>
+       <div class="weather-icon my-2">☀️</div>
+       <p class="text-2xl font-bold text-brand-dark">17°<span class="text-base font-normal text-subtle">/9°C</span></p>
+       <p class="text-xs text-subtle mt-1">แดดจัด มีเมฆเป็นบางส่วน</p>
+      </div>
+      <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+       <p class="text-xs text-subtle">4 ก.ย. (วันที่ 6)</p>
+       <div class="weather-icon my-2">🌤️</div>
+       <p class="text-2xl font-bold text-brand-dark">17°<span class="text-base font-normal text-subtle">/9°C</span></p>
+       <p class="text-xs text-subtle mt-1">มีแสงแดดเป็นบางส่วน</p>
+      </div>
+      <div class="bg-white border border-brand/10 rounded-2xl p-4 card-hover text-center">
+       <p class="text-xs text-subtle">5 ก.ย. (วันที่ 7)</p>
+       <div class="weather-icon my-2">🌤️</div>
+       <p class="text-2xl font-bold text-brand-dark">17°<span class="text-base font-normal text-subtle">/9°C</span></p>
+       <p class="text-xs text-subtle mt-1">มีแสงแดดเป็นบางส่วน</p>
+      </div>
+     </div>
+
+     <div class="mt-2 bg-brand-50 border border-brand/10 rounded-2xl p-5">
+      <h4 class="font-semibold text-brand-dark mb-3">📊 สรุปสภาพอากาศ</h4>
+      <p class="text-sm text-subtle">ช่วงเช้าและเย็นจะหนาวกว่ากลางวันพอสมควร ต่างกันได้ถึง 8-10°C ควรแต่งกายแบบเลเยอร์เพื่อปรับตามอุณหภูมิที่เปลี่ยนแปลงในแต่ละช่วงเวลาของวัน</p>
+     </div>
+     <p class="text-xs text-subtle mt-4 italic">* ข้อมูลสภาพอากาศเป็นค่าเฉลี่ยตามฤดูกาลโดยประมาณ เนื่องจากวันเดินทางอยู่นอกช่วงพยากรณ์อากาศระยะสั้น กรุณาตรวจสอบพยากรณ์อากาศล่าสุดอีกครั้งก่อนเดินทางที่ accuweather.com</p>
+    </section>
+
+    <!-- ========== CLOTHING ========== -->
+    <section id="sec-clothing" class="tab-section fade-in">
+     <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">👔 การแต่งกายและสภาพภูมิอากาศ</h2>
+     <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10 mb-6">
+      <h3 class="font-semibold text-brand-dark mb-2">🌡️ ภูมิอากาศ</h3>
+      <p class="text-sm text-subtle">แต่งแบบเลเยอร์เป็นหลัก เพราะช่วงเช้า/เย็นจะหนาวกว่ากลางวันพอสมควร (ต่างกันได้ถึง 8-10°C)</p>
+     </div>
+
+     <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+       <h4 class="font-semibold text-brand-dark mb-3">🧥 การแต่งกายแบบเลเยอร์</h4>
+       <ul class="text-sm space-y-2">
+        <li class="flex items-start gap-2"><span>👕</span> ชั้นใน: เสื้อยืดแขนยาวหรือเสื้อคอกลมบางๆ</li>
+        <li class="flex items-start gap-2"><span>🧶</span> ชั้นกลาง: สเวตเตอร์หรือเสื้อกันหนาวบางๆ</li>
+        <li class="flex items-start gap-2"><span>🧥</span> ชั้นนอก: แจ็คเก็ตกันลม/กันหนาวเบาๆ (light jacket หรือ trench coat) ใส่ตอนเช้า-เย็น ถอดได้ตอนกลางวันถ้าแดดออก</li>
+        <li class="flex items-start gap-2"><span>👖</span> กางเกงขายาว ผ้าหนาพอสมควร เช่น ยีนส์หรือกางเกงขายาว</li>
+        <li class="flex items-start gap-2"><span>👟</span> รองเท้าผ้าใบหรือบูทสั้นที่ปิดเท้ามิดชิด กันลมได้ดี</li>
+        <li class="flex items-start gap-2"><span>🧣</span> ผ้าพันคอบางๆ ติดตัวไว้ เผื่ออากาศเย็นตอนเช้า</li>
+        <li class="flex items-start gap-2"><span>🕶️</span> แดดจัดในบางวัน แนะนำพกแว่นกันแดด</li>
+       </ul>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5">
+       <h4 class="font-semibold text-amber-800 mb-3">🎒 สิ่งที่ควรพกติดตัว</h4>
+       <div class="grid grid-cols-1 gap-2 text-sm text-amber-700">
+        <div class="flex items-center gap-2"><span>🔌</span> Universal Adapter (ปลั๊กกลมสองขาแบบยุโรป 230V/50Hz)</div>
+        <div class="flex items-center gap-2"><span>💊</span> ยาประจำตัว พร้อมแจ้งหัวหน้าทัวร์ให้ทราบก่อนเดินทาง</div>
+        <div class="flex items-center gap-2"><span>🧴</span> ครีมทามือ/ลิปมัน กันผิวแห้ง</div>
+        <div class="flex items-center gap-2"><span>💳</span> บัตรเครดิต/เดบิต (Mastercard, Visa, Amex ใช้ได้ทั่วไป)</div>
+        <div class="flex items-center gap-2"><span>🧣</span> ผ้าพันคอ/หมวกไหมพรมบาง</div>
+        <div class="flex items-center gap-2"><span>🕶️</span> แว่นกันแดด</div>
+        <div class="flex items-center gap-2"><span>📄</span> สำเนาหนังสือเดินทางและรูปถ่าย 1.5-2 นิ้ว</div>
+       </div>
+      </div>
+     </div>
+    </section>
+
+    <!-- ========== TRAVEL PREPARATION ========== -->
+    <section id="sec-prep" class="tab-section fade-in">
+     <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">🧳 การเตรียมตัวเดินทาง</h2>
+
+     <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+       <h4 class="font-semibold text-brand-dark mb-3">🧴 ของเหลวในกระเป๋าถือขึ้นเครื่อง</h4>
+       <p class="text-sm text-subtle">กรุณาอย่านำของมีคมรวมทั้งของเหลวทุกชนิดที่มีขนาดบรรจุเกิน 100 มิลลิลิตร ถือขึ้นเครื่อง ให้โหลดใส่กระเป๋าใบใหญ่เท่านั้น หากสายการบินตรวจพบจะยึดโดยไม่คืน ของเหลวที่ได้รับการยกเว้น ได้แก่ นมและอาหารสำหรับเด็กทารกในปริมาณที่เหมาะสม รวมถึงยาที่มีเอกสารกำกับชัดเจน</p>
+       <p class="text-xs text-subtle mt-2">แต่ละขนาดบรรจุภัณฑ์ต้องไม่เกิน 100 มล. และรวมกันต้องไม่เกิน 1,000 มล.</p>
+      </div>
+
+      <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+       <h4 class="font-semibold text-brand-dark mb-3">🔋 แบตเตอรี่สำรอง (Power Bank)</h4>
+       <ul class="text-sm text-subtle space-y-2">
+        <li>• ห้ามนำ Power Bank ใส่กระเป๋าเดินทางโหลดใต้เครื่อง สามารถใส่กระเป๋าถือขึ้นเครื่องได้เท่านั้น</li>
+        <li>• ความจุไฟฟ้าไม่เกิน 32,000 mAh</li>
+        <li>• 20,000 mAh หรือน้อยกว่า (ต่ำกว่า 100 Wh) นำขึ้นเครื่องได้ ไม่จำกัดจำนวน</li>
+        <li>• 20,000-32,000 mAh (100-160 Wh) นำขึ้นเครื่องได้ไม่เกิน 2 ก้อน</li>
+        <li>• มากกว่า 32,000 mAh (มากกว่า 160 Wh) ไม่ได้รับอนุญาตในทุกกรณี</li>
+       </ul>
+      </div>
+     </div>
+
+     <div class="bg-brand-50 rounded-2xl p-5 border border-brand/10 mb-6">
+      <h4 class="font-semibold text-brand-dark mb-3">🧳 น้ำหนักกระเป๋าเดินทาง (ชั้นประหยัด — สายการบิน Finnair)</h4>
+      <div class="grid md:grid-cols-2 gap-4 text-sm">
+       <div>
+        <p class="font-semibold text-brand mb-2">กระเป๋าโหลดใต้เครื่อง</p>
+        <p class="text-subtle">1 ใบ/ท่าน น้ำหนักไม่เกิน 23 กิโลกรัม ขนาดไม่เกิน 90 x 75 x 45 ซม.</p>
+       </div>
+       <div>
+        <p class="font-semibold text-brand mb-2">กระเป๋าถือขึ้นเครื่อง</p>
+        <p class="text-subtle">น้ำหนักไม่เกิน 8 กิโลกรัม ขนาดไม่เกิน 55 x 40 x 23 ซม.</p>
+       </div>
+      </div>
+     </div>
+
+     <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+       <h4 class="font-semibold text-brand-dark mb-3">✅ ข้อมูลสำคัญเรื่องเวลาขึ้นเครื่อง</h4>
+       <p class="text-sm text-subtle">ประตูทางออกขึ้นเครื่องจะเปิดให้บริการขึ้นเครื่อง 3 ชั่วโมงก่อนเครื่องออก และจะปิด 45-60 นาทีก่อนเครื่องออก </p>
+      </div>
+
+      <div class="bg-white border border-brand/10 rounded-2xl p-5 card-hover">
+       <h4 class="font-semibold text-brand-dark mb-3">🛡️ คำแนะนำและข้อควรระวัง</h4>
+       <ul class="text-sm text-subtle space-y-2">
+        <li>• หนังสือเดินทางเป็นเอกสารสำคัญ ควรนำติดตัวตลอดเวลา</li>
+        <li>• ไม่ควรเก็บทรัพย์สินมีค่าไว้ในห้องพักหรือใส่ไว้ในกระเป๋าเดินทาง</li>
+        <li>• พกพาเงินสดเท่าที่จำเป็น ใช้จ่ายผ่านบัตรเครดิตเป็นหลัก</li>
+        <li>• ระวังสัมภาระและกระเป๋าเงินเป็นพิเศษในสถานที่ที่มีคนพลุกพล่าน</li>
+        <li>• ไม่สนทนากับคนพเนจรหรือคนแปลกหน้า แม้จะแต่งกายภูมิฐานน่าเชื่อถือ</li>
+        <li>• ระวังกลุ่มมิจฉาชีพแอบอ้างเป็นตำรวจเพื่อขอตรวจสิ่งของ อย่าส่งเงินให้ตรวจ</li>
+       </ul>
+      </div>
+     </div>
+
+   </main>
+
+   <!-- Footer -->
+   <footer class="bg-brand-dark text-white text-center py-6 px-4">
+    <p class="text-sm opacity-80">Finland – Estonia</p>
+    <p class="text-xs opacity-50 mt-1">30 สิงหาคม - 6 กันยายน 2569 | 8 วัน 6 คืน</p>
+   </footer>
+  </div>
+
+  <script>
+function showSection(id) {
+  document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const sec = document.getElementById('sec-' + id);
+  if (sec) { sec.classList.add('active'); sec.classList.remove('fade-in'); void sec.offsetWidth; sec.classList.add('fade-in'); }
+  document.querySelector('[data-nav="' + id + '"]')?.classList.add('active');
+}
+
+function showDay(n) {
+  document.querySelectorAll('.day-content').forEach(d => d.style.display = 'none');
+  document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active-day'));
+  const dayEl = document.getElementById('day-' + n);
+  if (dayEl) { dayEl.style.display = 'block'; dayEl.classList.remove('fade-in'); void dayEl.offsetWidth; dayEl.classList.add('fade-in'); }
+  document.querySelectorAll('.day-tab')[n - 1]?.classList.add('active-day');
+}
+
+lucide.createIcons();
+</script>
+ </body>
+</html>
