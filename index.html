@@ -368,7 +368,7 @@ body { font-family: 'Prompt', sans-serif; }
         </div>
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
-         <p class="text-sm">🍽️ รับประทานอาหารค่ำในโรงแรม</p>
+         <p class="text-sm">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร</p>
         </div>
        </div>
        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs flex items-center gap-2">
@@ -396,21 +396,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🎓 มหาวิทยาลัยอาลโต (Aalto University)</p>
-          <p class="text-subtle mt-1">คณะศึกษาดูงานมหาวิทยาลัยอาลโต มหาวิทยาลัยอันดับ 1 ของฟินแลนด์ที่เกิดจากการควบรวมสถาบันระดับท็อปด้านเทคโนโลยี (Tech) บริหารธุรกิจ (Business) และศิลปะการออกแบบ (Art & Design) เข้าด้วยกัน โดดเด่นที่สุดในเรื่องของ Ecosystem ด้านนวัตกรรมและการสร้าง Start-up ระดับโลก</p>
-          <div class="mt-3">
-           <img src="https://www.aalto.fi/sites/default/files/styles/1_6_567w_354h_n/public/2023-10/A-logo_around_Campus_12-6-2020_photo_Mikko_Raskinen_063_Original_0.jpg?h=07843702&itok=Q6VBMBpz" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
-         </div>
-        </div>
-        </div>
-
-        <div class="relative">
-         <div class="timeline-dot absolute -left-[31px] top-1"></div>
-         <p class="text-sm">🍽️ รับประทานอาหารกลางวันภายในมหาวิทยาลัยอาลโต — Ravintola Arvo</p>
-        </div>
-        <div class="relative">
-         <div class="timeline-dot absolute -left-[31px] top-1"></div>
-         <div class="text-sm">
+          <p class="text-sm"><span class="font-semibold text-brand">10:00 น.</span>
           <p class="font-semibold">🌲 New Wood Exhibition</p>
           <p class="text-subtle mt-1">คณะศึกษาดูงานโครงการ New Wood (Uusi puu) โครงการริเริ่มและเครือข่ายความร่วมมือในประเทศฟินแลนด์ที่มุ่งเน้นการจัดแสดงและส่งเสริมนวัตกรรม ผลิตภัณฑ์ และโซลูชันที่ทำจากไม้และเส้นใยไม้ (Bio-based products) เพื่อทดแทนพลาสติกและฟอสซิล ขับเคลื่อนเศรษฐกิจหมุนเวียน (Bioeconomy)</p>
           <div class="mt-3">
@@ -421,9 +407,25 @@ body { font-family: 'Prompt', sans-serif; }
 
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <p class="text-sm">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร</p>
+        </div>
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="text-sm"><span class="font-semibold text-brand">14:00 น.</span>
+          <p class="font-semibold">Haaga-Helia University of Applied Sciences</p>
+          <p class="text-subtle mt-1">ศึกษาดูงาน Haaga-Helia University of Applied Sciences เป็นหนึ่งในมหาวิทยาลัยทางด้านวิทยาศาสตร์ประยุกต์ (University of Applied Sciences หรือ UAS) ที่มีชื่อเสียงและใหญ่ที่สุดในประเทศฟินแลนด์ สถาบันเน้นการจัดการเรียนการสอนที่มุ่งเน้นการปฏิบัติจริง การเชื่อมโยงกับภาคธุรกิจ และการเตรียมความพร้อมให้กับนักศึกษาสู่ตลาดแรงงานระดับสากล</p>
+          <div class="mt-3">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Haaga-Helia_Pasila.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
+         </div>
+        </div>
+        </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">⛪ มหาวิหารเฮลซิงกิ (Helsinki Cathedral)</p>
-          <p class="text-subtle mt-1">ชมมหาวิหารเฮลซิงกิ โบสถ์ลูเธอรัน ออกแบบโดยสถาปนิก Carl Ludvig Engel ในสไตล์นีโอคลาสสิก สร้างขึ้นระหว่างปี ค.ศ. 1830–1852 ตั้งตระหง่านเหนือจัตุรัสวุฒิสภา (Senate Square) ศูนย์กลางทางประวัติศาสตร์ สถาปัตยกรรม และวัฒนธรรมของเมือง</p>
+          <p class="text-subtle mt-1">ผ่านชมมหาวิหารเฮลซิงกิ โบสถ์ลูเธอรัน ออกแบบโดยสถาปนิก Carl Ludvig Engel ในสไตล์นีโอคลาสสิก สร้างขึ้นระหว่างปี ค.ศ. 1830–1852 ตั้งตระหง่านเหนือจัตุรัสวุฒิสภา (Senate Square) ศูนย์กลางทางประวัติศาสตร์ สถาปัตยกรรม และวัฒนธรรมของเมือง</p>
           <div class="mt-3">
            <img src="https://thehiddennorth.com/wp-content/uploads/2023/10/Helsinki.jpg" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
          </div>
@@ -434,7 +436,7 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
           <p class="font-semibold">🏛️ ทำเนียบรัฐบาลฟินแลนด์ (The Government Palace)</p>
-          <p class="text-subtle mt-1">ชมทำเนียบรัฐบาลฟินแลนด์ อาคารสำคัญทางประวัติศาสตร์และการเมืองที่ยิ่งใหญ่ที่สุดแห่งหนึ่ง เดิมเคยเป็นที่ทำการของสภาแห่งจักรวรรดิรัสเซีย ก่อนเปลี่ยนเป็นทำเนียบรัฐบาลหลังฟินแลนด์ประกาศอิสรภาพในปี ค.ศ. 1917</p>
+          <p class="text-subtle mt-1">ทำเนียบรัฐบาลฟินแลนด์ อาคารสำคัญทางประวัติศาสตร์และการเมืองที่ยิ่งใหญ่ที่สุดแห่งหนึ่ง เดิมเคยเป็นที่ทำการของสภาแห่งจักรวรรดิรัสเซีย ก่อนเปลี่ยนเป็นทำเนียบรัฐบาลหลังฟินแลนด์ประกาศอิสรภาพในปี ค.ศ. 1917</p>
           <div class="mt-3">
            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Valtioneuvoston_linna.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" loading="lazy" class="tour-img" alt="Garuda Wisnu Kencana">
          </div>
@@ -455,8 +457,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Restaurant Zetor</p>
-          <p class="text-subtle mt-1">Menu: Grilled Salmon with Dill Potatoes and Hollandaise Sauce, Blueberry Pie with Vanilla Mousse</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
          </div>
         </div>
        </div>
@@ -485,6 +486,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
+          <p class="text-sm"><span class="font-semibold text-brand">11:00 - 12:00 น.</span>
           <p class="font-semibold">🏥 เมฮิไลเนน กรุ๊ป (Mehiläinen Group)</p>
           <p class="text-subtle mt-1">คณะศึกษาดูงาน เมฮิไลเนน กรุ๊ป (Mehiläinen Group) เป็นผู้ให้บริการทางการแพทย์และบริการดูแลทางสังคม (Healthcare and Social Care) ภาคเอกชนที่ใหญ่ที่สุดและเก่าแก่ที่สุดแห่งหนึ่งในประเทศฟินแลนด์ รวมถึงเป็นผู้นำด้านนวัตกรรมดิจิทัลเฮลธ์แคร์ (Digital Healthcare) ในภูมิภาคยุโรปเหนือ ปีที่ก่อตั้ง ค.ศ. 1909 (พ.ศ. 2452) มีอายุเก่าแก่กว่า 116 ปี จุดเด่นที่สุดที่ทำให้กลุ่มทุนนี้เป็นผู้นำระดับสากลคือ เทคโนโลยีการแพทย์</p>
           <ul class="text-subtle mt-2 text-xs space-y-1 list-disc list-inside">
@@ -499,8 +501,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Restaurant Konnichiwa - Buffet</p>
-          <p class="text-subtle mt-1">Cold & Hot Dishes / Main: Sushi and Hot Buffet Dishes / Dessert: Fruits</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
          </div>
         </div>
         <div class="relative">
@@ -516,8 +517,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Restaurant Gillet Bar & Bistro</p>
-          <p class="text-subtle mt-1">Entree: Shrimp 'Skagen' and malted rye bread with iced fennel and dill oil / Main: Slow-cooked beef brisket with roasted celeriac, potato terrine and thyme–red wine sauce / Dessert: Chocolate cake with marinated blackberries and mascarpone mousse</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
          </div>
         </div>
        </div>
@@ -543,13 +543,13 @@ body { font-family: 'Prompt', sans-serif; }
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <p class="text-sm">🍽️ รับประทานอาหารเช้าในโรงแรม</p>
         </div>
+
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">📡 Elisa Corporation (EFQM Global Award 2021)</p>
-          <p class="text-subtle mt-1">คณะศึกษาดูงาน Elisa Corporation (EFQM Global Award 2021) เป็นบริษัทโทรคมนาคมสัญชาติฟินแลนด์ (Finland) ที่สร้างประวัติศาสตร์ในระดับสากล โดยเป็น ผู้ให้บริการโทรคมนาคม (Telecom Operator) รายแรกของโลก ที่ได้รับการรับรองระดับ 6 ดาว (6 Stars) จากรางวัล EFQM Global Award 2021 ซึ่งจัดโดยมูลนิธิเพื่อการจัดการคุณภาพแห่งยุโรป (European Foundation for Quality Management)</p>
+          <p class="font-semibold">DNA (อยู่ระหว่างดำเนินการ) </p>
+          <p class="text-subtle mt-1"></p>
           <div class="mt-3">
-           <img src="https://suomimobiili.fi/wp-content/uploads/2019/09/Elisa_5G_hero.jpg" loading="lazy" class="tour-img" alt="Suomenlinna Fortress">
           </div>
          </div>
         </div>
@@ -557,14 +557,13 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Restaurant La Famiglia</p>
-          <p class="text-subtle mt-1">Entree: Tomato-basil soup, bread & butter / Main: Chicken with seasonal vegetables, thyme-red wine sauce and fried potatoes / Dessert: Strawberry-raspberry sorbet</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
          </div>
         </div>
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🌲 Metsä Fibre (Espoo) — EFQM Global Award 2022</p>
+          <p class="font-semibold">🌲 Metsä Fibre (Espoo) — EFQM Global Award 2022 (อยู่ระหว่างดำเนินการ)</p>
           <p class="text-subtle mt-1">คณะศึกษาดูงาน Metsa Fibre (Espoo) EFQM Global Award 2022) เป็นบริษัทผู้ผลิตเยื่อกระดาษ (Pulp) และผลิตภัณฑ์ไม้แปรรูปรายใหญ่ระดับโลกจากประเทศฟินแลนด์ โดยมีสำนักงานใหญ่ตั้งอยู่ที่เมือง Espoo (เอสโป) เป็นบริษัทฟินแลนด์แห่งแรก ที่สามารถคว้าการรับรองในระดับสูงสุดนี้มาครองได้สำเร็จ ซึ่งสะท้อนถึงการเป็นองค์กรที่มีผลการดำเนินงานเป็นเลิศและมีความยั่งยืนในระดับสากล</p>
           <div class="mt-3">
            <img src="https://www.metsagroup.com/globalassets/metsa-fibre/images/about-us/pulp-production/kemi/mf-kemi-2023-dji_0184__web-1.jpg" loading="lazy" class="tour-img" alt="Metsä Fibre Espoo">
@@ -574,8 +573,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Restaurant Strindberg</p>
-          <p class="text-subtle mt-1">Wild duck two ways, carrots with chervil and wild duck broth / Roasted trout with fregola pasta and shellfish broth / Raw chocolate pie with raspberry and lemon sorbet</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
          </div>
         </div>
        </div>
@@ -604,6 +602,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
+          <p class="text-sm"><span class="font-semibold text-brand">10:00 - 11:00 น.</span>
           <p class="font-semibold">📚 ห้องสมุดโอดิ (Helsinki Central Library Oodi)</p>
           <p class="text-subtle mt-1">ห้องสมุดเออดี้ (Helsinki Central Library Oodi) ห้องสมุดไฮเทคแห่งใหม่ของเฮลซิงกิถูกออกแบบและสร้างได้อย่างสวยงาม ภายในมีหนังสือต่างๆ กว่า 1 แสนเล่ม มีพื้นที่สำหรับดูภาพยนตร์ สตูดิโอเล็กๆ ไว้เป็นพื้นที่สำหรับอัดเสียง มีห้อง 3D Printers ที่มีไว้ให้บริการสำหรับนักสร้างสรรค์ Oodi ใช้หุ่นยนต์ขับเคลื่อนอัตโนมัติ (AGVs) ในการลำเลียงหนังสือจากจุดคืนหนังสือขึ้นมายังชั้น 3 เพื่อให้บรรณารักษ์จัดขึ้นชั้น ช่วยลดภาระงานหนักและทำให้บรรณารักษ์มีเวลาดูแลผู้ใช้บริการมากขึ้น</p>
           <div class="mt-3">
@@ -636,8 +635,9 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
+          <p class="text-subtle mt-1"><span class="font-semibold text-brand">15:30 น.</span> 
           <p class="font-semibold">🏙️ เมืองทาลลินน์ (Tallinn)</p>
-          <p class="text-subtle mt-1"><span class="font-semibold text-brand">15:30 น.</span> เดินทางถึงเมืองทาลลินน์ (Tallinn) เป็นเมืองหลวงและเมืองท่าที่สำคัญที่สุดของเอสโตเนียซึ่งเมืองนี้ผ่านการครอบครองโดยหลายเชื้อชาติในอดีตไม่ว่าจะเป็นเดนมาร์ค สวีเดน รัสเซีย และได้เป็นอิสระจากสหภาพโซเวียตเมื่อปี ค.ศ. 1994</p>
+          <p class="text-subtle mt-1">เดินทางถึงเมืองทาลลินน์ (Tallinn) เป็นเมืองหลวงและเมืองท่าที่สำคัญที่สุดของเอสโตเนียซึ่งเมืองนี้ผ่านการครอบครองโดยหลายเชื้อชาติในอดีตไม่ว่าจะเป็นเดนมาร์ค สวีเดน รัสเซีย และได้เป็นอิสระจากสหภาพโซเวียตเมื่อปี ค.ศ. 1994</p>
           <div class="mt-3">
            <img src="https://res.cloudinary.com/odysseytraveller/image/fetch/f_auto,q_auto,dpr_auto,r_4,w_765,h_535.5,c_limit/https://cdn.odysseytraveller.com/app/uploads/2020/03/GettyImages-487525618.jpg" loading="lazy" class="tour-img" alt="Tallinn Estonia">
           </div>
@@ -646,8 +646,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Peppersack Restaurant</p>
-          <p class="text-subtle mt-1">Traditional creamy fish soup with herbs, bread and butter / Main: Pork loin fillet with fried potatoes, grilled vegetables and mustard sauce / Dessert: A slice of Peppersack's legendary braided kringle with cinnamon-raisins filling and chocolate-nuts coating</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
          </div>
         </div>
        </div>
@@ -676,20 +675,33 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">💻 E-Estonia Briefing Centre</p>
-          <p class="text-subtle mt-1">คณะศึกษาดูงาน E -Estonia Briefing Centre ศูนย์บรรยายเกี่ยวกับอิเล็กทรอนิกส์ของเอสโตเนีย เป็นศูนย์บริหารและศูนย์กลางนวัตกรรมในทาลลินน์ ซึ่งคิดค้น มาเป็นพิเศษเพื่อให้ได้รับประสบการณ์ที่สัมผัสกับสภาพจิตใจ ก่อตั้งขึ้นในปี2009 ในฐานะองค์กรพัฒนาเอกชน ปัจจุบันเป็นส่วนหนึ่งของ ENTERPRISE ESTONIA และมีบทบาทสำคัญในการส่งเสริมแบรนด์และประเทศของ  นำเสนอกรอบแนวคิดของE-ESTONIA และยังทำหน้าที่เป็นผู้ประสานงานระหว่าง G2G, B2G และความสัมพันธ์ B2B อีกทั้งยังเป็นเจ้าภาพในการต้อนรับ ประธานาธิบดี, รัฐมนตรี, ผู้มีอำนาจตัดสินใจระดับสูงจากภาครัฐและเอกชน, นักลงทุนและสื่อต่างประเทศ</p>
+          <p class="text-subtle mt-1"><span class="font-semibold text-brand">10:00 - 12:00 น.</span> 
+          <p class="font-semibold">e-Governance Academy Foundation (eGA)</p>
+          <p class="text-subtle mt-1">คณะศึกษาดูงาน e-Governance Academy Foundation (eGA) มูลนิธิและศูนย์ความชำนาญการอิสระที่ไม่แสวงหาผลกำไร ก่อตั้งขึ้นในปี ค.ศ. 2002 โดยความร่วมมือระหว่างรัฐบาลเอสโตเนีย โปรแกรมการพัฒนาแห่งสหประชาชาติ (UNDP) และสถาบัน Open Society Institute (OSI) มีวัตถุประสงค์หลักในการวิเคราะห์ ถ่ายทอด และถอดบทเรียนความสำเร็จของการพัฒนารัฐบาลดิจิทัล (e-Governance) นวัตกรรมภาครัฐ และความมั่นคงปลอดภัยไซเบอร์ให้แก่ประเทศต่างๆ ทั่วโลก</p>
           <div class="mt-3">
-           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6zbBnI4U0Zk8LVzoNNd0X1xGt8vhPJQiWRlWP8TDs1g&s=10" loading="lazy" class="tour-img" alt="e-Estonia Briefing Centre">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoRgyeYv8zpYmtdVCodkNRy-NMDadkfAU8qNSiugfJCMiYRiZmmMWUOZaa&s=10" loading="lazy" class="tour-img" alt="e-Estonia Briefing Centre">
           </div>
          </div>
         </div>
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร Restaurant Nok Nok</p>
-          <p class="text-subtle mt-1">Entree: Spicy prawn soup / Main: Spicy minced chicken salad, golden deep-fried fish sautéed in sweet and sour sauce with pineapple and vegetables, Thai omelet, crispy pork belly with broccoli, panang curry with pork, rice / Dessert: Fruit</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารกลางวัน ณ ภัตตาคาร </p>
          </div>
         </div>
+
+        <div class="relative">
+         <div class="timeline-dot absolute -left-[31px] top-1"></div>
+         <div class="text-sm">
+          <p class="text-subtle mt-1"><span class="font-semibold text-brand">10:00 - 12:00 น.</span> 
+          <p class="font-semibold">💻 Zone Media OÜ </p>
+          <p class="text-subtle mt-1">คณะศึกษาดูงาน Zone Media OÜ เป็นบริษัทผู้ให้บริการโครงสร้างพื้นฐานทางเทคโนโลยีและอินเทอร์เน็ตชั้นนำที่ก่อตั้งขึ้นในเมืองทัลลินน์ (Tallinn) ประเทศเอสโตเนีย ตั้งแต่ปี ค.ศ. 1999 ถือเป็นหนึ่งในผู้ให้บริการ Cloud และ Web Hosting ที่ได้รับความนิยมสูงสุดในภูมิภาคบอลติก</p>
+          <div class="mt-3">
+           <img src="https://static.ssb.ee/images/universal/INTEGREERITUD-EESTI-POHINE-VEEBIHALDUS-KIIRE-DOMEENIREGISTREERIMINE-TOOKINDEL-VEEBIMAJUTUS-JA-SKALEERITAVAD-PILVESERVERID_81820769_m_xl.jpeg" loading="lazy" class="tour-img" alt="e-Estonia Briefing Centre">
+          </div>
+         </div>
+        </div>
+
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
@@ -724,8 +736,7 @@ body { font-family: 'Prompt', sans-serif; }
         <div class="relative">
          <div class="timeline-dot absolute -left-[31px] top-1"></div>
          <div class="text-sm">
-          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร Restaurant Farm</p>
-          <p class="text-subtle mt-1">Entree: Smoked eggplant, prosciutto, roasted bell pepper, pickled red onion, goat milk yogurt sauce, homemade bread, sea salt butter / Main: Grilled duck breast, celery root puree, yellow beets with thyme, pak choi, duck jus sauce with apricots / Dessert: Cheesecake, forest berries sauce</p>
+          <p class="font-semibold">🍽️ รับประทานอาหารค่ำ ณ ภัตตาคาร </p>
          </div>
         </div>
        </div>
